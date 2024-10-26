@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Gaming Club IITI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="game.css">
+    <script src="game.js"></script>
+    <div id="preloader" class="preloader">
+        <div class="loader"></div></div>
+</head>
+
+<body>
+    <header>
+        <div class="name"> <a href="../" class="logo"><img src="../gc_logo2-removebg.png"> Events Gallery</a></div>
+        <div class="mobile-menu-icon">☰</div>  <!-- Add this line -->
+        <ul>
+            <li><a href="../" >Home</li></a>
+            <li><a href="../tournaments" >Tournaments</li></a>
+            <li ><a href="../about_page" >About Us</li></a>
+        </ul>
+    </header>
+    
+    <div class="side-navbar">
+        <span class="close-btn">&times;</span>
+        <ul>
+            <li><a href="../">Home</a></li>
+            <li><a href="../tournaments">Tournaments</a></li>
+            <li><a href="../about_page">About Us</a></li>
+            <li ><a href="#">Contact Us</li></a>
+        </ul>
+    </div>
+    
+    <main>
+        <div class="container">
+            <div class="slide">
+                <div class="item" style="background-image: url(https://i.ibb.co/qCkd9jS/img1.jpg);">
+                    <div class="content">
+                        <div class="name">Switzerland</div>
+                        <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(https://i.ibb.co/jrRb11q/img2.jpg);">
+                    <div class="content">
+                        <div class="name">Finland</div>
+                        <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(https://i.ibb.co/NSwVv8D/img3.jpg);">
+                    <div class="content">
+                        <div class="name">Iceland</div>
+                        <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(https://i.ibb.co/Bq4Q0M8/img4.jpg);">
+                    <div class="content">
+                        <div class="name">Australia</div>
+                        <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(https://i.ibb.co/jTQfmTq/img5.jpg);">
+                    <div class="content">
+                        <div class="name">Netherland</div>
+                        <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(https://i.ibb.co/RNkk6L0/img6.jpg);">
+                    <div class="content">
+                        <div class="name">Ireland</div>
+                        <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button">
+                <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <a href="../" style="text-decoration: none;">
+                    <h2 class="logo-text">Gaming Club IITI</h2>
+                </a>
+                <p>
+                    Join us in the ultimate gaming experience. Compete, connect, and conquer with fellow gaming enthusiasts.
+                </p>
+            </div>
+            <div class="footer-section social">
+                <a href="https://facebook.com" target="_blank" class="social-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Gaming Club IITI 
+        </div>
+    </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.13.0/qs.min.js" integrity="sha512-LGi3LadLxI4NfDCsvTQ+Ps8dmV3PK7QUNFMEPyqpfFI78fu9YUXPRRVHIOH9xS5OLz035SSTH2Mc2Tzau+l7BA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+    const sideNavbar = document.querySelector('.side-navbar');
+    const closeBtn = document.querySelector('.close-btn');
+
+    mobileMenuIcon.addEventListener('click', function() {
+        sideNavbar.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', function() {
+        sideNavbar.classList.remove('active');
+    });
+    // Find the logo element
+    const logoElement = document.querySelector('.name a.logo');
+    if (window.innerWidth <= 768) { 
+    if (logoElement) {
+        // Get the text content of the logo element
+        let text = logoElement.textContent;
+        
+        // Replace "Events Gallery" with "Events"
+        text = text.replace('Events Gallery', 'Gallery');
+        
+        // Set the new text content
+        logoElement.innerHTML = `<img src="../gc_logo2-removebg.png">${text}`;
+    }
+    }
+    // Listen for window resize events
+    window.addEventListener('resize', handleButtonPlacement);
+    
+});
+document.addEventListener('DOMContentLoaded', function() {
+    
+    });
+</script>
+<script>
+     document.addEventListener('DOMContentLoaded', function() {
+    const container = document.querySelector('.container');
+    const buttonContainer = document.querySelector('.button');
+    const main = document.querySelector('main');
+    if (window.innerWidth <= 768) { 
+    function positionButtons() {
+        // Move button container outside of the main container
+       // Adjust this breakpoint as needed for mobile screens
+        if (container.contains(buttonContainer)) {
+            main.insertBefore(buttonContainer, container.nextSibling);
+        }
+
+        // Adjust button container positioning
+        const containerRect = container.getBoundingClientRect();
+        buttonContainer.style.position = 'absolute';
+        buttonContainer.style.top = `${containerRect.top + window.scrollY}px`;
+        buttonContainer.style.left = `${containerRect.left}px`;
+        buttonContainer.style.width = `${containerRect.width}px`;
+        buttonContainer.style.height = `${containerRect.height}px`;
+        buttonContainer.style.pointerEvents = 'none';
+
+        // Ensure buttons are clickable
+        const buttons = buttonContainer.querySelectorAll('button');
+        buttons.forEach(button => {
+            button.style.position = 'absolute';
+            button.style.top = '130%';
+
+            button.style.transform = 'translateY(-50%)';
+            button.style.pointerEvents = 'auto';
+        });
+
+        buttons[0].style.left = '130px'; // Position the "prev" button
+        buttons[1].style.right = '130px'; // Position the "next" button
+    }
+}
+
+    // Initial positioning
+    positionButtons();
+
+    // Reposition on window resize
+    window.addEventListener('resize', positionButtons);
+
+    // Reposition on scroll
+    window.addEventListener('scroll', positionButtons);
+
+});
+</script>
+
+</body>
+
+</html>
