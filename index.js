@@ -38,7 +38,7 @@ app.post('/query', (req,res)=>{
 
   const mailOptions = {
     from: email,  // User's email
-    to: 'abhijitkashyap97@gmail.com',  
+    to: process.env.RECIPIENT_EMAIL,  
     subject: `Query from ${name} `,  
     html: message +  `<br>.The sender's email id is ${email}`,  
   };
