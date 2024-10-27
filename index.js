@@ -4,7 +4,14 @@ const path=require('path')
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const {readFile}=require('fs').promises;
-app.use(express.static('public'))
+// Serve static files with correct MIME types
+app.use(express.static('public', {
+  setHeaders: (res, path) => {
+      if (path.endsWith('.css')) {
+          res.setHeader('Content-Type', 'text/css');
+      }
+  }
+}));
 
 const cloudinary = require('cloudinary');
 
