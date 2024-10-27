@@ -831,6 +831,9 @@ footer {
         max-width: 20%;
         height: 30%;
     }
+    .card-container .card .content p{
+        font-size: 1em;
+    }
     .navigation-buttons{
         margin-top: -55%;
         padding-top: -55%;
