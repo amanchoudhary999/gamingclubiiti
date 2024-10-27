@@ -24,6 +24,9 @@ const readHtmlFiles = async () => {
   tournaments = await readFile(path.join(process.cwd(), 'public', 'tournaments', 'tournaments.html'), 'utf-8');
 }
 readHtmlFiles();
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 app.get('/tournaments',(req,res)=>{
         res.send(tournaments);
 })
