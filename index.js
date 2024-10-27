@@ -7,13 +7,45 @@ const {readFile}=require('fs').promises;
 // Serve static files with correct MIME types
 app.use(express.static('public', {
   setHeaders: (res, path) => {
+      // Set correct content types
       if (path.endsWith('.css')) {
-          res.setHeader('Content-Type', 'text/css');
+          res.set('Content-Type', 'text/css');
+      }
+      if (path.endsWith('.js')) {
+          res.set('Content-Type', 'application/javascript');
+      }
+      if (path.endsWith('.mp4')) {
+          res.set('Content-Type', 'video/mp4');
+      }
+      if (path.endsWith('.png')) {
+          res.set('Content-Type', 'image/png');
+      }
+      if (path.endsWith('.jpg') || path.endsWith('.jpeg')) {
+          res.set('Content-Type', 'image/jpeg');
+      }
+      
+      // Set caching headers for better performance
+      if (path.match(/\.(css|js|png|jpg|jpeg|gif|ico)$/)) {
+          res.set('Cache-Control', 'public, max-age=31557600'); // Cache for 1 year
+      }
+      if (path.match(/\.(mp4|webm)$/)) {
+          res.set('Cache-Control', 'public, max-age=31557600');
+          // Enable partial content for videos
+          res.set('Accept-Ranges', 'bytes');
       }
   }
 }));
 
-const cloudinary = require('cloudinary');
+// Configure for larger file uploads if needed
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ extended: true, limit: '50mb' }));
+
+// Add route for streaming video content
+app.get('/*.mp4', (req, res, next) => {
+  // Let express.static handle it, but with proper headers
+  next();
+});
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 

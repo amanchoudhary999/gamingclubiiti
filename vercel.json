@@ -29,11 +29,33 @@
     },
     {
       "src": "/(.*)\\.css",
+      "headers": { "content-type": "text/css" },
       "dest": "/public/$1.css"
     },
     {
       "src": "/(.*)\\.js",
+      "headers": { "content-type": "application/javascript" },
       "dest": "/public/$1.js"
+    },
+    {
+      "src": "/(.*)\\.mp4",
+      "headers": { "content-type": "video/mp4" },
+      "dest": "/public/$1.mp4"
+    },
+    {
+      "src": "/(.*)\\.png",
+      "headers": { "content-type": "image/png" },
+      "dest": "/public/$1.png"
+    },
+    {
+      "src": "/(.*)\\.jpg",
+      "headers": { "content-type": "image/jpeg" },
+      "dest": "/public/$1.jpg"
+    },
+    {
+      "src": "/(.*)\\.jpeg",
+      "headers": { "content-type": "image/jpeg" },
+      "dest": "/public/$1.jpeg"
     },
     {
       "src": "/(.*)",
