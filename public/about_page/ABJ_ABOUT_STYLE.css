@@ -183,7 +183,7 @@ header .logo:hover {
 }
 .hero-container {
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 100px), calc(100% - 100px) 100%, 0 100%);
-    margin-top: 1%;
+    margin-top: 0;
     border-radius: 1px;
     /*Width of the bottom strip*/
     padding-bottom: 9.69px;
