@@ -66,11 +66,11 @@ app.get('/games_parti',(req,res)=>{
 app.get('/about_page',(req,res)=>{
     res.send(about);
 })
-app.post('/query', (req,res)=>{
+app.post('/queries', (req,res)=>{
   const { name, email, message } = req.body;
 
   const mailOptions = {
-    from: email,  // User's email
+    from: email,  
     to: process.env.RECIPIENT_EMAIL,  
     subject: `Query from ${name} `,  
     html: message +  `<br>.The sender's email id is ${email}`,  
