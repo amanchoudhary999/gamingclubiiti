@@ -43,8 +43,8 @@ body {
 
 header {
     position: fixed;
-    font-size: 1.2rem;
-    height: 12vh;
+    font-size: 1.169rem;
+    height: 12.69vh;
     background-color: rgba(17, 17, 17, 0.8);
     top: 0;
     left: 0;
@@ -187,7 +187,7 @@ header .logo:hover {
     border-radius: 1px;
     /*Width of the bottom strip*/
     padding-bottom: 9.69px;
-    height: calc(98vh - 76px);
+    height: calc(98.169vh - 76px);
     display: grid;
     place-items: center;
     overflow: hidden;
