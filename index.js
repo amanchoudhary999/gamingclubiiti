@@ -43,8 +43,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user: 'abhijitkashyap7264@gmail.com', 
+    pass: 'rjdr iilu vljf faqw',     
   },
 });
 
@@ -71,7 +71,7 @@ app.post('/queries', (req,res)=>{
 
   const mailOptions = {
     from: email,  
-    to: process.env.RECIPIENT_EMAIL,  
+    to: 'abhijitkashyap97@gmail.com',  
     subject: `Query from ${name} `,  
     html: message +  `<br>.The sender's email id is ${email}`,  
   };
