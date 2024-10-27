@@ -24,8 +24,12 @@
       "dest": "/index.js"
     },
     {
-      "src": "/public/(.*)",
-      "dest": "/public/$1"
+      "src": "/files/(.*)",
+      "dest": "/files/$1"
+    },
+    {
+      "src": "/DSC[0-9]+\\[1\\]\\.(jpg|JPG)",
+      "dest": "/files/$0"
     },
     {
       "src": "/(.*)\\.css",

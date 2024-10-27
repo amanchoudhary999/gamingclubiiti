@@ -5,15 +5,39 @@ const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const {readFile}=require('fs').promises;
 // Serve static files with correct MIME types
-app.use(express.static('public', {
-  setHeaders: (res, path) => {
-      if (path.endsWith('.css')) {
-          res.setHeader('Content-Type', 'text/css');
+app.use('/files', express.static(path.join(__dirname, 'public', 'files'), {
+  setHeaders: (res, filepath) => {
+      if (filepath.match(/\.(jpg|jpeg|JPG|JPEG)$/)) {
+          res.set('Content-Type', 'image/jpeg');
       }
   }
 }));
 
+app.use(express.static('public', {
+  setHeaders: (res, path) => {
+      if (path.endsWith('.css')) {
+          res.set('Content-Type', 'text/css');
+      }
+      if (path.endsWith('.js')) {
+          res.set('Content-Type', 'application/javascript');
+      }
+      if (path.endsWith('.mp4')) {
+          res.set('Content-Type', 'video/mp4');
+      }
+      if (path.endsWith('.png')) {
+          res.set('Content-Type', 'image/png');
+      }
+      if (path.endsWith('.jpg') || path.endsWith('.jpeg') || path.endsWith('.JPG')) {
+          res.set('Content-Type', 'image/jpeg');
+      }
+  }
+}));
 
+// Add this specific route for handling files with brackets
+app.get('/files/:filename', (req, res) => {
+  const filename = decodeURIComponent(req.params.filename);
+  res.sendFile(path.join(__dirname, 'public', 'files', filename));
+});
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const transporter = nodemailer.createTransport({
