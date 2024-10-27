@@ -2,18 +2,31 @@
 <html lang="en">
 
 <head>
-    <script src="./script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.13.0/qs.min.js" integrity="sha512-LGi3LadLxI4NfDCsvTQ+Ps8dmV3PK7QUNFMEPyqpfFI78fu9YUXPRRVHIOH9xS5OLz035SSTH2Mc2Tzau+l7BA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Move preloader div outside of head - it should be in body -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaming Website IIT Indore</title>
-    <link rel="stylesheet" href="./styles.css">
+    
+    <!-- Fix CSS path - try both options -->
+    <link rel="stylesheet" href="/styles.css">
+    <!-- or -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+    <!-- Fix Font Awesome URL - current one has invalid characters -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+          integrity="sha512-9usAa10IRO0HhonpyAIVpjrCkYZcLYrc0hBrqxpDk15LgZP7K7BMvZNIsWPKg3QE5ME/2yTOL97QQD4OKX8UuQ==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IR00HhonpyAIVpjry]PvoDwiPUiKdWk5t3Pyo]Y1c0d4DSE®Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <div id="preloader" class="preloader">
-    <div class="loader"></div></div>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" 
+          rel="stylesheet">
+    
+    <!-- Move script to end of body for better performance -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.13.0/qs.min.js" 
+            integrity="sha512-LGi3LadLxI4NfDCsvTQ+Ps8dmV3PK7QUNFMEPyqpfFI78fu9YUXPRRVHIOH9xS5OLz035SSTH2Mc2Tzau+l7BA==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
