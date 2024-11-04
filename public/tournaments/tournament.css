@@ -1,0 +1,790 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #00ffff;
+    --secondary-color: #ff00ff;
+    --background-color: #0a0a2a;
+}
+::-webkit-scrollbar {
+    width: 12px;
+    z-index: 997;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #0787a7);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, #00c6ff);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: rgb(197, 197, 197);;
+    line-height: 1.5;
+}
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.loader {
+    width: 90px;
+    aspect-ratio: 1;
+    color: #514b82;
+    background: conic-gradient( from 134deg at top,currentColor  92deg,#0000 0);
+    position: relative;
+    animation: l22-0 2s infinite linear;
+  }
+  .loader:before,
+  .loader:after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: currentColor; 
+    transform-origin: top right;
+    clip-path: polygon(100% 0,100% 100%,0 100%);
+    inset: auto 100% 0 auto;
+    animation: l22-1 1s infinite linear alternate;
+  }
+  .loader:after {
+    inset:auto auto 0 100%;
+    transform-origin: top left;
+    --s:-1;
+    clip-path: polygon(0 0,100% 100%,0 100%);
+  }
+  @keyframes l22-0 {
+   0% ,49.99% {transform:scaleY(1)}
+   50%,90%    {transform:scaleY(-1)}
+   100%       {transform:scaleY(-1) rotate(180deg)}
+  }
+  @keyframes l22-1 {
+   0% ,30%   {transform:rotate(calc(var(--s,1)*0))}
+   70%,100%  {transform:rotate(calc(var(--s,1)*180deg))}
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 1.4rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.7s;
+    padding: 18px 100px;
+    z-index: 100000;
+}
+
+.navbar a{
+    font-size: 0.85em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+header.sticky {
+    padding: 21px 109px;
+    background-color: rgba(17, 17, 17, 0.8);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2.1em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: 0.6s;
+}
+.name{
+    display: flex;
+}
+.name img{
+    padding-top: 7px;
+    cursor: pointer;
+    height: 50px;
+    transform: scale(2); 
+}
+.name img:hover{
+    transform: scale(2.05); 
+}
+
+/* Tournament Details Section */
+.tournament-details {
+    padding: 6.9rem 0;
+    background-color: black;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 22px;
+}
+
+.section-title {
+    text-align: center;
+    margin-top: 58px;
+    margin-bottom: 3.4rem;
+    color: var(--primary-color);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.2rem;
+}
+
+.detail-item {
+    background-color: rgba(26, 26, 26, 0.8);
+    padding: 2.1rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.detail-item:hover {
+    transform: translateY(-12px);
+}
+
+.detail-item i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.detail-item h3 {
+    font-size: 1.7rem;
+    margin-bottom: 0.6rem;
+}
+
+.tournament-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 3rem;
+    padding: 2rem 0;
+}
+
+.box {
+    width: 320px;
+    height: 420px;
+    perspective: 1000px;
+    z-index: 1;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+.box:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    clip-path: polygon(0 calc(30px),calc(30px) 0, 100% 0, 100% calc(100% - 30px), calc(100% - 25px) 100%, 0 100%);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.card-front {
+    background-color: #1a1a2e;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-front img {
+    object-fit: fill; 
+    width: 100%; 
+    height: 100%; /* Ensures the image takes up the full height */
+    transition: 0.3s ease; 
+}
+
+.card-front h3 {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    color: #00ffff;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.card-back {
+    background-color: #16213e;
+    color: #ddf8ff;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    text-align: center;
+}
+
+.card-back h3 {
+    font-size: 1.8rem;
+    color: #00ffff;
+    margin-bottom: 1rem;
+}
+
+.card-back p {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.learn-more {
+    padding: 0.75rem 1.5rem;
+    background-color: #00ffff;
+    color: #16213e;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.learn-more:hover {
+    background-color: #dfffff;
+    color: #16213e;
+    transform: scale(1.04);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
+}
+
+.section-title.neon {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #00ffff;
+}
+
+footer {
+    width: 100%;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    padding: 50px 0 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+    min-width: 300px;
+    margin-bottom: 40px;
+}
+
+.footer-section h2 {
+    color: #00ffff;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.about .logo-text {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.about p {
+    margin-bottom: 20px;
+}
+
+.about .contact span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.socials a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #333;
+    color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.socials a:hover {
+    background: #00ffff;
+    color: #1a1a1a;
+    transform: translateY(-5px);
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links ul li {
+    margin-bottom: 15px;
+}
+
+.links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.links ul li a:hover {
+    color: #00ffff;
+    padding-left: 10px;
+}
+
+.contact-form .contact-input {
+    background: #333;
+    color: #ffffff;
+    border: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.contact-form .contact-input::placeholder {
+    color: #999;
+}
+
+.contact-form .contact-btn {
+    background: #00ffff;
+    color: #1a1a1a;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form .contact-btn:hover {
+    background: #ffffff;
+}
+
+.footer-bottom {
+    background: #111;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 1.569rem;
+    right: 1.169rem;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--primary-color);
+    z-index: 998; /* Ensure it's above other elements */
+}
+
+.side-navbar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 190px;
+    height: 100vh;
+    background-color: rgba(17, 17, 17, 0.9);
+    z-index: 1000;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+}
+
+.side-navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.side-navbar a:hover {
+    background-color: rgba(0, 255, 255, 0.1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 1.45em;
+    right: 1.469em;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        padding: 0.4em 0.8em;
+    }
+    header.sticky {
+        padding: 0.4em 0.8em;
+    }
+    .navbar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    *{
+        overflow-x: hidden;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    header {
+        padding: 0.4em 0.8em;
+    }
+    header.sticky {
+        padding: 0.4em 0.8em;
+    }
+    .navbar {
+        display: none;
+    }
+    
+    .detail-item:hover {
+        transform: translateY(-7.69px);
+    }
+    
+    .detail-item i {
+        font-size: 0.769rem;
+        color: var(--primary-color);
+        margin-bottom: 0.69rem;
+    }
+    
+    .detail-item h4 {
+        font-size: 1.3rem;
+        margin-bottom: 0.6rem;
+    }
+    .detail-item p{
+        font-size: 0.769rem;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .side-navbar.active {
+        right: 0;
+    }
+    /* Hide menu toggle when sidebar is active */
+    .side-navbar.active + .menu-toggle {
+        display: none;
+    }
+    header .logo {
+        font-size: 1.2em;
+    }
+    .name img {
+        height: 1.4em;
+    }
+    .tournament-details .section-title {
+        font-size: 1.769rem;
+    }
+    
+    .tournament-grid {
+        gap: 0.69rem;
+    }
+    .previous-tournaments{
+        margin-bottom: 3.69em;
+    }
+    .previous-tournaments .container h2{
+        font-size: 1.469em;
+    }
+    .upcoming-events .container h2{
+        margin-top: 6.9px;
+        font-size: 1.469em;
+    }
+    .previous-tournaments .container .box {
+        width: 46%;
+        height: 12.69em;
+    }
+    .upcoming-events .container .box {
+        width: 46%;
+        height: 12.69em;
+    }
+    .card-back h3 {
+        font-size: 1.3rem;
+    }
+
+    .previous-tournaments .box.card-back .learn-more {
+        padding: 0.6rem 1.2rem;
+    }
+    .previous-tournaments .box .card-front img :hover{
+        display: none;
+    }
+}
+/*footer */
+@media only screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        padding: 0;
+        margin-bottom: 27.69px;
+    }
+
+    .footer-section h2 {
+        font-size: 1.469rem;
+    }
+
+    .about .logo-text {
+        font-size: 1.669rem;
+    }
+
+    .socials a {
+        width: 30.69px;
+        height: 30.69px;
+        line-height: 330.69px;
+    }
+
+    .contact-form {
+        display: none;
+    }
+}
+
+/* Media query for mobile devices (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+    .footer-content {
+        padding: 0 9px;
+    }
+
+    .footer-section h2 {
+        font-size: 1.269rem;
+    }
+
+    .about .logo-text {
+        font-size: 1.569rem;
+    }
+
+    .footer-section {
+        padding: 0 9px;
+        margin-bottom: 18.69px;
+    }
+
+    .socials a {
+        width: 30px;
+        height: 30px;
+        line-height: 28px;
+    }
+
+    .footer-bottom {
+        font-size: 0.769rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tournament-details {
+        background-color: #000;
+        padding: 18.69px 0;
+    }
+
+    .section-title .neon {
+        color: #00ffff;
+        font-size: 21.69px;
+        text-align: center;
+        margin-bottom: 29px;
+        text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+    }
+
+    .tournament-details .details-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        justify-items: center;
+        padding: 19px 0px;
+    }
+
+    .tournament-details .details-grid .detail-item {
+        text-align: center;
+        position: relative;
+        width: 106.69px;
+        height: 106.69px;
+        border: 2px solid #00ffff;
+        border-radius: 50%;
+        background: #000;
+        cursor: pointer;
+    }
+
+    .tournament-details .detail-item i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 34.69px;
+        color: #00ffff;
+        z-index: 1;
+    }
+
+    .tournament-details .detail-item.active i {
+        display: none;
+    }
+
+    .tournament-details .detail-item h4, 
+    .tournament-details .detail-item p {
+        position: absolute;
+        padding-right: 100px;
+        width: 100%;
+        text-align: center;
+        color: #00ffff;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .tournament-details .detail-item h4 {
+        top: 28%;
+        transform: translateY(-50%);
+        font-size: 12.369px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .tournament-details .detail-item p {
+        top: 62%;
+        transform: translateY(-50%);
+        text-align: center;
+        font-size: 8.569px;
+        margin: 0;
+    }
+
+    .tournament-details .detail-item.active h4,
+    .detail-item.active p {
+        opacity: 1;
+    }
+
+    .previous-tournaments .box .card-inner {
+            transform: none;
+        }
+        .upcoming-events .box .card-inner {
+            transform: none;
+        }
+        /* Ensure the front (image) is visible initially */
+        .tournament-grid .card-front {
+            font-size: 0.8969px;
+            z-index: 2;
+            opacity: 1; /* Image is visible initially */
+            backface-visibility: hidden; /* Ensure it doesn't flip */
+            transition: opacity 0.3s ease-in-out;
+        }
+        .tournament-grid .card-back {
+            font-size: smaller;
+            opacity: 0; 
+            z-index: 1;
+            transform: none; 
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        .tournament-grid .card-front h3{
+            font-weight:bolder;
+            font-size: 0.869rem;
+        }
+        .tournament-grid .card-back h3{
+            font-size: 0.669rem;
+        }
+        .tournament-grid .card-back p{
+            font-size: 0.569rem;
+        }
+        .tournament-grid .card-back .learn-more{
+            font-size: 0.669rem;
+            padding:2px 3px;
+        }
+        .box:hover .card-front {
+            opacity: 0; 
+        }
+    
+        .box:hover .card-back {
+            opacity: 1; 
+        }
+        .card-back h3 {
+            font-size: 0.969rem;
+            color: #00ffff;
+            margin-bottom: 0.8rem;
+        }
+        
+        .card-back p {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+        
+        .learn-more {
+            padding: 0.2169rem 0.369rem;
+            background-color: #00ffff;
+            color: #16213e;
+            text-decoration: none;
+            border-radius: 1.2px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+}
+
+/* Additional adjustments for smaller screens */
+@media screen and (max-width: 480px) {
+    .detail-item {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .tournament-details .detail-item i {
+        font-size: 28px;
+    }
+
+    .tournament-details.detail-item h4 {
+        font-size: 12px;
+    }
+
+    .tournament-details .detail-item p {
+        font-size: 10px;
+    }
+}
+
