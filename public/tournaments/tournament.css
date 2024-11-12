@@ -461,7 +461,7 @@ footer {
     cursor: pointer;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (orientation: portrait){
     header {
         padding: 0.4em 0.8em;
     }
@@ -473,7 +473,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (orientation: portrait){
     *{
         overflow-x: hidden;
     }
@@ -560,7 +560,7 @@ footer {
     }
 }
 /*footer */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (orientation: portrait){
     .footer-content {
         flex-direction: column;
         align-items: center;
@@ -592,7 +592,7 @@ footer {
 }
 
 /* Media query for mobile devices (max-width: 480px) */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) and (orientation: portrait){
     .footer-content {
         padding: 0 9px;
     }
@@ -621,7 +621,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (orientation: portrait){
     .tournament-details {
         background-color: #000;
         padding: 18.69px 0;
@@ -737,7 +737,7 @@ footer {
             padding:2px 3px;
         }
         .box:hover .card-front {
-            opacity: 0; 
+            opacity: 0;
         }
     
         .box:hover .card-back {
@@ -769,7 +769,7 @@ footer {
 }
 
 /* Additional adjustments for smaller screens */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) and (orientation: portrait){
     .detail-item {
         width: 100px;
         height: 100px;
@@ -785,6 +785,124 @@ footer {
 
     .tournament-details .detail-item p {
         font-size: 10px;
+    }
+}
+@media (orientation: landscape) and (max-width: 1111px){
+    .banner .slider .slide .left-info{
+        width: 50%;
+    }
+    .banner .slider .slide .right-info{
+        width: 50%;
+    }
+    .banner .slider .slide .left-info .content p{
+        display: none;
+    }
+    .tournament-details .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .tournament-details .details-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .tournament-details .detail-item{
+        width: 200px;
+        height: 200px;
+    }
+    .banner .slider .slide .left-info .content .btn{
+        width: 140px;
+        height: 30px;
+        font-size: 1rem;
+        text-align: center;
+        padding: 0;
+        padding-top: 3px;
+    }
+    .banner .slider .slide .left-info h1{
+        font-size: 4rem;
+    }
+    .banner .slider .slide .right-info h1{
+        font-size: 4rem;
+    }
+    .previous-tournaments .box{
+        width: 150px;
+        height: 200px;
+    }
+    .previous-tournaments .tournament-grid{
+        justify-content: center;
+        gap: 100px;
+    }
+    .previous-tournaments .tournament-grid .card-inner .card-front h3{
+        font-size: 1rem;
+        text-align: center;
+        padding: 0;
+        padding-top: 10px;
+    }
+    .upcoming-events .container .card-inner {
+        width: 150px;
+        height: 200px;
+    }
+    .upcoming-events .container .card-inner h3{
+        font-size: 1rem;
+        text-align: center;
+        padding: 0;
+        padding-top: 10px;
+    }
+    .upcoming-events .container .tournament-grid{
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+    }   
+    .upcoming-events .container .tournament-grid .box{
+        width: 150px;
+        height: 200px;
+    }
+    .container .section-title{
+        font-size: 2.2rem;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-back{
+        padding: 40px 10px 40px 10px;
+    }
+    .card-back h3{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .card-back p{
+        display: none;
+    }
+    .card-back a{
+        font-size: 0.5rem;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .footer-section {
+        text-align: center;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .footer-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .about .logo-.name-text {
+        font-size: 1.8rem;
+    }
+
+    .socials a {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+    
+    .contact-form {
+        display: none;
     }
 }
 

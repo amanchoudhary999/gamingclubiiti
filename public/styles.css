@@ -805,7 +805,7 @@ footer {
 }
 
 /* Media Queries */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (orientation: portrait) {
     header {
         padding: 14px 0px;
     }
@@ -837,9 +837,11 @@ footer {
         padding: 40px 50px;
         grid-template-columns: 1fr;
     }
-
     .gaming-club-content {
         grid-template-columns: 1fr;
+    }
+    .trans img{
+        justify-self: center;
     }
     .card-container{
         display: flex;
@@ -849,20 +851,18 @@ footer {
     }
    .card-container .card {
         width: 50%;
-        padding: -20%;
         max-width: 20%;
-        height: 30%;
+        height: 60%;
     }
     .card-container .card .content p{
         font-size: 1em;
     }
     .navigation-buttons{
-        margin-top: -55%;
-        padding-top: -55%;
+        margin-top: -15%;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (orientation: portrait){
     ::-webkit-scrollbar {
         display: none;
     }
@@ -892,7 +892,6 @@ footer {
     }
     .mobile-menu-icon {
         display: block;
-        padding-top: -10%;
     }
     .side-navbar {
         display: block;
@@ -918,8 +917,8 @@ footer {
     }
    .card-container .card {
         width: 30%;
-        max-width: 21%;
-        height: 30%;
+        max-width: 31%;
+        height: 60%;
     }
     .trans p {
         font-size: 0.9em;
@@ -932,16 +931,18 @@ footer {
         padding-bottom:269px;
     }
     .card-container .flex .card .content .heading{
-        padding-top:-30%;
-        font-size: 12.69px;
+        padding-top: 80px;
+        font-size: 15.69px;
     }
     .card-container .flex .card .content .info{
-        padding-top:-69%;
-        font-size: 7px;
+        font-size: 10px;
+    }
+    .navigation-buttons{
+        margin-top: -20%;
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) and (orientation: portrait){
     .top {
         width: 100%;
         height: 45vh;
@@ -995,8 +996,8 @@ footer {
         height: 50%;
     }
     .navigation-buttons{
-        margin-top: -30%;
-        padding-top: -30%;
+        margin-top: -40%;
+        padding-top: -40%;
     }
     .flex {
         display: flex;
@@ -1028,7 +1029,7 @@ footer {
         font-size: 0.9em;
     }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (orientation: portrait){
     .footer-content {
         flex-direction: column;
         align-items: center;
@@ -1060,7 +1061,7 @@ footer {
 }
 
 /* Media query for mobile devices (max-width: 480px) */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) and (orientation: portrait){
     .footer-content {
         padding: 0 10px;
     }
@@ -1088,4 +1089,186 @@ footer {
         font-size: 0.8rem;
     }
 }
+@media (orientation: landscape) and (max-width: 1111px){
+    header{
+        padding: 14px 0px;
+    }
+    header .sticky{
+        padding: 14px 0px;
+    }
+    header .name img{
+        width: 70px;
+        height: 35px;
+    }
+    header .name a{
+        font-size: 1.5rem;
+    }
+    header ul{
+        display: none;
+    }
+    .partners-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .mobile-menu-icon {
+        display: block;
+        position: absolute;
+        top: 0.81rem;
+        right: 0.6rem;
+        cursor: pointer;
+        font-size: 40px;
+        color: var(--primary-color);
+    }
+    .side-navbar{
+        display: block;
+        width: 230px;
+        padding-left: 25px;
+    }
+    .side-navbar-close {
+        position: absolute;
+        top: 0.64rem;
+        right: 0.64rem;
+        color: #00ffff;
+        font-size: 1.52rem;
+        cursor: pointer;
+    }
+    .trans {
+        padding: 40px 50px;
+        grid-template-columns: 1fr;
+    }
+    .trans h1{
+        font-size: 3rem;
+    }
+    .trans img{
+        justify-self: center;
+        width: 500px;
+        height: 300px;
+    }
+    .gaming-club-content {
+        grid-template-columns: 1fr;
+        font-size: 0.8rem;
+    }
+    .cards .Heading-cards h1{
+        font-size: 3rem;
+        margin-bottom: 5px;
+    }
+    .card-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        justify-content: center;
+    }
+    .card-container .card{
+        width: 50%;
+        max-width: 20%;
+        height: 80%;
+    }
+    .card-container .card .content{
+        margin-top: -20%;
+    }
+    .card-container .card .content p{
+        font-size: 0.3em;
+    }
+    .card-container .card .content h1{
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    .navigation-buttons{
+        margin-top: -4%;
+    }
+    .partners-section{
+        padding-top: 10px;
+        padding-bottom: 50px;
+    }
+    .partners-section h1{
+        font-size: 2.8rem;
+    }
+    .partners-text{
+        font-size: 1rem;
+    }
+    .partners-hr .middle{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .partners-logos{
+        margin-top: -14%;
+    }
+    .partner-logo{
+        height: 150px;
+        width: 150px;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .footer-section {
+        text-align: center;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .footer-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .about .logo-.name-text {
+        font-size: 1.8rem;
+    }
+
+    .socials a {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+    
+    .contact-form {
+        display: none;
+    }
+}
+@media (orientation: landscape) and (max-width: 768px){
+    header .name a{
+        font-size: 1.1rem;
+    }
+    header .name img{
+        width: 40px;
+        height: 20px;
+    }
+    .mobile-menu-icon{
+        font-size: 20px;
+    }
+    .trans h1{
+        font-size: 2rem;
+    }
+    .trans img{
+        width: 300px;
+        height: 200px;
+    }
+    .gaming-club-content{
+        font-size: 0.7rem;
+    }
+    .cards .Heading-cards h1{
+        font-size: 2rem;
+    }
+    .card-container .card{
+        width: 30%;
+        max-width: 30%;
+        height:110%;
+    }
+    .navigation-buttons{
+        margin-top: 50px;
+    }
+    .partners-section h1{
+        font-size: 2rem;
+    }
+    .partners-text{
+        font-size: 0.9rem;
+    }
+    .partners-logos{
+        margin-top: -20%;
+    }
+    .partner-logo{
+        width: 100px;
+        height: 100px;
+    }
+}

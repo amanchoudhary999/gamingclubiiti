@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const upcomingEvents = document.querySelector('.upcoming-events .tournament-grid');
     
     function adjustCards() {
-        const isMobile = window.innerWidth <= 768;
+        const isMobile = window.innerWidth <= 768 || window.matchMedia("(orientation: landscape)").matches;
         
         // Function to handle a single grid
         function handleGrid(grid) {
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Adjust the grid layout
             if (isMobile) {
                 grid.style.gridTemplateColumns = 'repeat(2, 1fr)';
-                grid.style.gap = '10px';
+                grid.style.gap = '100px';
             } else {
                 grid.style.gridTemplateColumns = 'repeat(3, 1fr)';
                 grid.style.gap = '20px';
