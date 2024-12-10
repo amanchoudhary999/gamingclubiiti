@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@421&family=Press+Start+2P&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -43,6 +44,7 @@ header {
 }
 
 header .logo {
+    font-family: "Audiowide", sans-serif;
     position: relative;
     font-weight: 700;
     color: #00ffff;
