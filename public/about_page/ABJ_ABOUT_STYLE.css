@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@421&family=Press+Start+2P&display=swap');
+
 :root {
     --primary-color: #00ffff;
     --secondary-color: #ff00ff;
@@ -43,18 +45,16 @@ body {
 
 header {
     position: fixed;
-    font-size: 1.169rem;
-    height: 12.69vh;
-    background-color: rgba(17, 17, 17, 0.8);
     top: 0;
     left: 0;
+    font-size: 1.2rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: 0.8s;
-    padding: 0px 100px;
-    z-index: 998;
+    transition: 0.7s;
+    padding: 18px 100px;
+    z-index: 100000;
 }
 
 header.sticky {
@@ -66,13 +66,16 @@ header.sticky {
 header .logo {
     position: relative;
     font-weight: 700;
-    color: #00ffff;
+    color: #fff;
     text-decoration: none;
     font-size: 2em;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     transition: 0.6s;
-    animation: slide-in-left 3s forwards;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
 }
 
 header ul {
@@ -80,6 +83,7 @@ header ul {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 header ul li {
@@ -179,15 +183,17 @@ header .logo:hover {
 
 /*Hero*/
 .kuch{
-    background-color: #03d5d5;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 68%, #03d5d5 100%);
 }
 .hero-container {
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 100px), calc(100% - 100px) 100%, 0 100%);
-    margin-top: 0;
+    margin-top: 10px;
+    padding-top: 10px;
     border-radius: 1px;
     /*Width of the bottom strip*/
     padding-bottom: 9.69px;
-    height: calc(98.169vh - 76px);
+    height: calc(96.69vh - 76px);
     display: grid;
     place-items: center;
     overflow: hidden;

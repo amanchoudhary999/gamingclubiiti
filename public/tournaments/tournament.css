@@ -128,7 +128,7 @@ header .logo {
 .name img{
     padding-top: 7px;
     cursor: pointer;
-    height: 50px;
+    height: 48px;
     transform: scale(2); 
 }
 .name img:hover{
@@ -430,9 +430,9 @@ footer {
     position: fixed;
     top: 0;
     right: -250px;
-    width: 190px;
+    width: 180px;
     height: 100vh;
-    background-color: rgba(17, 17, 17, 0.9);
+    background-color: rgba(17, 17, 17, 0.95);
     z-index: 1000;
     transition: 0.3s ease-in-out;
     display: flex;
