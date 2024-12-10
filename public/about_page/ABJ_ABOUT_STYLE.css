@@ -756,7 +756,7 @@ footer {
     }
 
     .logo {
-        padding-bottom: 3.3% ;
+        padding-bottom: 2.969% ;
         font-size: 1px;
     }
 
@@ -840,6 +840,7 @@ footer {
         clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%);
         margin-bottom: 41.69px;
         padding-bottom: 5px;
+        margin-top: -1.69%;
     }
 
     .herocard h2 {
