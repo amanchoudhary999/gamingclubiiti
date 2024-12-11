@@ -482,7 +482,13 @@ footer {
     .mobile-menu-icon {
         display: block;
     }
-    
+    .side-navbar.active {
+        right: 0;
+    }
+    /* Hide menu toggle when sidebar is active */
+    .side-navbar.active + .menu-toggle {
+        display: none;
+    }
     .side-navbar {
         display: block;
     }
