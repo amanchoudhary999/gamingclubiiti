@@ -67,7 +67,7 @@ window.onload = function() {
         "https://res.cloudinary.com/duf3hruwc/image/upload/v1733854229/rfjmck5ccikaiqomfzzi.jpg",
         "https://res.cloudinary.com/duf3hruwc/image/upload/v1733854229/j3hjx9jln76n6tw07dqf.jpg",
         "https://res.cloudinary.com/duf3hruwc/image/upload/v1733853245/jpq1qwiy0ytgyobszkdc.jpg",
-        "https://wallpaperaccess.com/thumb/10613455.jpg",
+        "https://res.cloudinary.com/dq2skbvkx/image/upload/v1733930499/b70cvd0i8orkzmtfajxp.jpg",
         "https://wallpaperaccess.com/thumb/9905503.jpg",
         "https://wallpaperaccess.com/thumb/8982739.jpg"
     ];
