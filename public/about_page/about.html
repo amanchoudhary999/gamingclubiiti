@@ -26,7 +26,7 @@
     <ul>
         <li><a href="../">Home</a></li>
         <li><a href="../tournaments">Tournament</a></li>
-        <li><a href="../about_page">About Us</a></li>
+        <li><a href="./">About Us</a></li>
         <li><a href="../index.html#gallery-to">Gallery</a></li>
         <li><a href="https://www.instagram.com/gamingclubiiti">Contact Us</a></li>
     </ul>
@@ -468,11 +468,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeBtn = document.querySelector('.close-btn');
 
     mobileMenuIcon.addEventListener('click', function() {
+        console.log('Hi');
         sideNavbar.classList.add('active');
+        mobileMenuIcon.style.display='none';
     });
 
     closeBtn.addEventListener('click', function() {
+        console.log('Hi');
         sideNavbar.classList.remove('active');
+        closeBtn.style.display='none';
     });
     
 });

@@ -729,7 +729,9 @@ footer {
 .slider-btn:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-
+.side-navbar.active {
+    right: 0;
+}
 /* Responsive width for smaller screens */
 @media (max-width: 768px) {
     .slider-btn {
@@ -798,9 +800,7 @@ footer {
         transition: 0.3s;
         overflow-y: auto;
     } 
-    .side-navbar.active {
-        right: 0;
-    }
+    
     
     .side-navbar ul {
         font: 1em sans-serif;
