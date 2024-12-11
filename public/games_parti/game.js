@@ -140,7 +140,7 @@ const Rocket=["https://res.cloudinary.com/duf3hruwc/image/upload/v1733849275/fyg
     let Mine=["Cubewars","Cubewars","Cubewars","Cubewars","Cubewars"]
     let rocket=["Octane 1.0","Octane 1.0","Octane 1.0","Octane 1.0","Octane 1.0"]
     let tekken=["T VS M","T VS M","T VS M","T VS M","T VS M"]
-    let bgmiText=["","","","","",""]
+    let bgmiText=["LAN","LAN","LAN","Freshers Cup","",""]
     // Check the game and set the respective images
     if (game === 'Valorant') {
         setBackgroundImages(valorantImages);
