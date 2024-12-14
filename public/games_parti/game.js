@@ -86,12 +86,11 @@ window.onload = function() {
 ,"https://res.cloudinary.com/duf3hruwc/image/upload/v1733856393/uyntqhckfnfh6fblqslq.jpg",
 "https://res.cloudinary.com/dq2skbvkx/image/upload/v1733828599/ofuyqtwrdoibsfzprybz.jpg"]
 
-    const CR=["https://wallpaperaccess.com/full/3942571.jpg",
+    const CR=["https://res.cloudinary.com/dq2skbvkx/image/upload/v1734212180/Screenshot_2024-12-15_030552_go3j5j.png",
 "https://wallpaperaccess.com/full/8212949.jpg",
 "https://wallpaperaccess.com/full/1396423.jpg",
 "https://wallpaperaccess.com/full/1396424.jpg",
-"https://wallpaperaccess.com/full/1396428.jpg",
-"https://wallpaperaccess.com/full/1396430.jpg",]
+"https://res.cloudinary.com/dq2skbvkx/image/upload/c_thumb,w_200,g_face/v1734211986/WhatsApp_Image_2024-12-14_at_09.01.42_c91128ba_mabpxy.jpg",]
 
     const Minecraft=["https://res.cloudinary.com/duf3hruwc/image/upload/v1733849274/kois6hhlo6l9o6jpqiw4.jpg",
     "https://res.cloudinary.com/duf3hruwc/image/upload/v1733849273/nhrxq0p3f7gejgcmcpd4.jpg",
@@ -139,8 +138,9 @@ const Rocket=["https://res.cloudinary.com/duf3hruwc/image/upload/v1733849275/fyg
     let fifaText=["Glitchpop 3.0","T vs M","Glitchpop 3.0","Glitchpop","Glitchpop"]
     let Mine=["Cubewars","Cubewars","Cubewars","Cubewars","Cubewars"]
     let rocket=["Octane 1.0","Octane 1.0","Octane 1.0","Octane 1.0","Octane 1.0"]
-    let tekken=["T VS M","T VS M","T VS M","T VS M","T VS M"]
+    let tekken=["T VS M","IronWill","IronWill","IronWill","IronWill"]
     let bgmiText=["LAN","LAN","LAN","Freshers Cup","",""]
+    let CRtext=["Glitchpop","Glitchpop","Glitchpop"]
     // Check the game and set the respective images
     if (game === 'Valorant') {
         setBackgroundImages(valorantImages);
@@ -160,7 +160,7 @@ const Rocket=["https://res.cloudinary.com/duf3hruwc/image/upload/v1733849275/fyg
     }
     else if(game==='CR'){
         setBackgroundImages(CR);
-        setText(Cr);
+        setText(CRtext);
     }
     else if(game==='Minecraft'){
         setBackgroundImages(Minecraft);
