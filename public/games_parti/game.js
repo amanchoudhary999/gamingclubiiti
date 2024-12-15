@@ -101,10 +101,7 @@ window.onload = function() {
 
 const MortalKombat=["https://res.cloudinary.com/dq2skbvkx/image/upload/v1733844752/ma2pzuojuj6nor5xn5eq.jpg",
 "https://res.cloudinary.com/duf3hruwc/image/upload/v1733855768/gm9mrnhelyk8as2dbpvh.jpg",
-"https://wallpaperaccess.com/thumb/633.jpg",
-"https://wallpaperaccess.com/thumb/557982.jpg",
-"https://wallpaperaccess.com/thumb/623.jpg",
-"https://wallpaperaccess.com/thumb/891576.jpg"]
+]
 
 const Rocket=["https://res.cloudinary.com/duf3hruwc/image/upload/v1733849275/fygb6uu8njtq9b13uxwx.jpg",
 "https://res.cloudinary.com/duf3hruwc/image/upload/v1733849272/ekhuofivk6lxrqifsrab.jpg",
