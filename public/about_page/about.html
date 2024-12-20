@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="ABJ_ABOUT_STYLE.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <div id="preloader" class="preloader">
-        <div class="loader"></div></div>
+    
 </head>
 <header>
     <div class="name"> <a href="../" class="logo"><img src="https://res.cloudinary.com/dq2skbvkx/image/upload/v1730036989/gc_logo2-removebg_uqbf76.png"> Gaming Club IITI</a></div>
@@ -375,15 +374,7 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
     document.head.appendChild(style);
 });
-document.addEventListener("DOMContentLoaded", function() {
-    // Hide the preloader
-    function hidePreloader() {
-        const preloader = document.getElementById("preloader");
-        preloader.style.display = "none";
-    }
-    // Add a slight delay to simulate loading time if needed
-    setTimeout(hidePreloader, 1000); // 2000ms = 2 seconds
-});
+
 
         const header = document.querySelector('header');
         document.addEventListener('DOMContentLoaded', () => {
